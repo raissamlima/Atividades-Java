@@ -24,6 +24,7 @@ public class View4 {
 
             Statement statement = conn.createStatement();
             String sql = "DELETE FROM pessoas WHERE id > 12";
+
             statement.execute(sql);
             int linhasAfetadas = statement.getUpdateCount();
             System.out.println(linhasAfetadas);
@@ -33,4 +34,5 @@ public class View4 {
             e.printStackTrace();
         }
     }
+
 }

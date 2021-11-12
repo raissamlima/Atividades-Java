@@ -25,7 +25,7 @@ public class View2 {
             Statement statement = conn.createStatement();
             String sql = "INSERT INTO pessoas(nome, sobrenome, idade, endereco, cpf)values('Testando', 'JAVA', 2, 1, 93293932)";
 
-            statement.execute(sql, statement.RETURN_GENERATED_KEYS);
+            statement.execute(sql, Statement.RETURN_GENERATED_KEYS);
             ResultSet ids = statement.getGeneratedKeys();
 
             while (ids.next()) {
@@ -38,4 +38,5 @@ public class View2 {
             e.printStackTrace();
         }
     }
+
 }
